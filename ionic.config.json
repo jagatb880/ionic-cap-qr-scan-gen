@@ -1,0 +1,7 @@
+{
+  "name": "login-qr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
