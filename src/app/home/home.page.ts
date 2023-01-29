@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  scanActive: boolean = false;
+  constructor(private router: Router) {}
+  scan(){
+    this.router.navigate(['/scan-qr'])
+  }
 
+  generateqr(){
+    this.router.navigate(['/generate-qr'])
+  }
+
+  
 }

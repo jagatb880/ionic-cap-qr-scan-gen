@@ -8,8 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'scan-qr',
+    loadChildren: () => import('./scan-qr/scan-qr.module').then( m => m.ScanQrPageModule)
+  },
+  {
+    path: 'generate-qr',
+    loadChildren: () => import('./generate-qr/generate-qr.module').then( m => m.GenerateQrPageModule)
   },
 ];
 
